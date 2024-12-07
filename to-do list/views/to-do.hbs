@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="header">
+              <table class="table">
+       <tbody>
+        {{#each to_do}}
+        <tr>
+            <td><a href="/update/{{this.id}}" id="taskId">{{name}}</a></td>
+            <td><a href="{{this.id}}"  class="deleteA" >Удалить</a></td>
+            <td class="Status" id="Status" value="{{this._id}}" >{{statusTask}}</td>
+        </tr>
+    
+        {{/each}}
+       </tbody>
+    </table>
+    </div>
+    <div class="form">
+        <form action="">
+        <input type="text" placeholder="Название задачи" class="Task_name"> 
+        <input type="text" placeholder="Описание задачи" class="Task_description">    
+
+        <input type="Time" class="Time">     
+         <input type="Date" class="Date" />
+
+    </form>
+    <button class="newTo_Do">Добавить</button>
+
+    </div>
+
+  </div>
+    <script src="to-do.js"></script>
+</body>
+</html>

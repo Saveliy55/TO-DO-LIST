@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+<table class="table">
+       <tbody>
+        {{#each to_do}}
+        <tr>
+            <td><p  id="taskId">{{name}}</p></td>
+            <td><p id="taskId">{{description}}</p></td>
+
+          
+        </tr>
+        {{/each}}
+       </tbody>
+    </table>
+   <div class="form">
+     <form action="">
+        <input type="text" value="{{to_do}}" name="currentID" class="currentID">
+        <input type="text" placeholder="Название задачи" class="Task_name">
+    </form>
+    <button class="newTo_Do">Добавить</button>
+   </div>
+    </div>
+    
+    <script src="/to-doPut.js"></script>
+</body>
+</html>
